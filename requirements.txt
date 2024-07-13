@@ -1,0 +1,5 @@
+fastapi
+uvicorn
+fitz
+sentence-transformers
+pinecone-client
