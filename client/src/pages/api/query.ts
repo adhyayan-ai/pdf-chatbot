@@ -6,8 +6,6 @@ type Data = {
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
   const { query } = req.body;
-
-  // Call your backend API here and get the response
   const backendRes = await fetch('http://127.0.0.1:8000/query', {
     method: 'POST',
     headers: {
