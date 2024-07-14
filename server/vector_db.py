@@ -8,10 +8,10 @@ class VectorDatabase:
         if index_name not in self.pinecone.list_indexes().names():
             self.pinecone.create_index(
                 name=index_name,
-                dimension=384,  # Make sure this matches your embedding dimension
+                dimension=384, 
                 metric='cosine',
                 spec=PodSpec(
-                    environment='gcp-starter'  # Free plan environment
+                    environment='gcp-starter'  # Because I can only afford a free plan for Pinecone
                 )
             )
         self.index = self.pinecone.Index(index_name)
@@ -19,7 +19,7 @@ class VectorDatabase:
     def add_embeddings(self, embeddings, sentences, batch_size=100):
         vectors = [{"id": str(i), "values": emb.tolist(), "metadata": {"text": sentences[i]}} for i, emb in enumerate(embeddings)]
         
-        # Upsert embeddings in batches
+        # Insert embeddings in batches
         for i in range(0, len(vectors), batch_size):
             batch = vectors[i:i + batch_size]
             self.index.upsert(vectors=batch)
