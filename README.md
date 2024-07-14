@@ -30,19 +30,19 @@ OpenAI for generating answers.
 
 ### **Installation**
 
-**Clone the repository\**\
+**Clone the repository**
 
 `git clone https://github.com/adhyayan-ai/pdf-chatbot.git
 cd pdf-chatbot`
 
-**Backend Setup\**\
+**Backend Setup**
 
 `cd server
 python -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt`
 
-**Frontend Setup\**\
+**Frontend Setup**
 
 `cd client
 npm install`
@@ -62,18 +62,18 @@ OPENAI_API_KEY=your-openai-api-key`
 
 ### **Running the Application**
 
-**Start the backend server\**\
+**Start the backend server**
 
 `cd server
 source venv/bin/activate`
 `uvicorn main:app \--reload`
 
-**Start the frontend development server\**\
+**Start the frontend development server**
 
 `cd client
 npm run dev`
 
-Open your browser and navigate to http://localhost:3000.
+*Open your browser and navigate to http://localhost:3000.*
 
 ## **Usage**
 
