@@ -30,52 +30,48 @@ OpenAI for generating answers.
 
 ### **Installation**
 
-**Clone the repository\
-**\
-git clone https://github.com/adhyayan-ai/pdf-chatbot.git
+**Clone the repository\**\
 
-cd pdf-chatbot
+`git clone https://github.com/adhyayan-ai/pdf-chatbot.git
+cd pdf-chatbot`
 
-**Backend Setup\
-**\
-cd server
+**Backend Setup\**\
 
-python3.12 -m venv venv
+`cd server
+python -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt`
 
-source venv/bin/activate \# On Windows, use \`venv\\Scripts\\activate\`
+**Frontend Setup\**\
 
-pip install -r requirements.txt
-
-**Frontend Setup\
-**\
-cd client
-
-npm install
+`cd client
+npm install`
 
 ### **Environment Variables**
 
 Create a .env file in the server directory and add your Pinecone and
 OpenAI API keys:
 
-PINECONE_API_KEY=your-pinecone-api-key
+`PINECONE_API_KEY=your-pinecone-api-key
+OPENAI_API_KEY=your-openai-api-key`
 
-OPENAI_API_KEY=your-openai-api-key
+### Adding Your PDF Document
+
+1.  Place your PDF document in the `server` directory.
+2.  Make sure the PDF is named `document.pdf`. If you use a different name, update the code in `pdf_parser.py` accordingly.
 
 ### **Running the Application**
 
-**Start the backend server\
-**\
-cd server
+**Start the backend server\**\
 
-source venv/bin/activate \# On Windows, use \`venv\\Scripts\\activate\`
+`cd server
+source venv/bin/activate`
+`uvicorn main:app \--reload`
 
-uvicorn main:app \--reload
+**Start the frontend development server\**\
 
-**Start the frontend development server\
-**\
-cd client
-
-npm run dev
+`cd client
+npm run dev`
 
 Open your browser and navigate to http://localhost:3000.
 
@@ -116,18 +112,3 @@ Open your browser and navigate to http://localhost:3000.
 4.  **Performance Optimization**: Optimized performance by using
     efficient data structures and algorithms for embedding storage and
     search.
-
-## **Contributing**
-
-We welcome contributions from the community. To contribute, please
-follow these steps:
-
-1.  Fork the repository.
-
-2.  Create a new branch for your feature or bugfix.
-
-3.  Make your changes and commit them with clear messages.
-
-4.  Push your changes to your forked repository.
-
-5.  Submit a pull request to the main repository.
