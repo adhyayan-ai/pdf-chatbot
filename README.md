@@ -1,3 +1,33 @@
+# **PDF Chatbot**
+
+A chatbot that allows users to ask questions about PDF documents and get
+relevant responses. It uses Pinecone for storing vector embeddings and
+OpenAI for generating answers.
+
+## **Features**
+
+-   Extracts text from PDF documents
+
+-   Creates text embeddings using OpenAI
+
+-   Stores embeddings in Pinecone\'s vector database
+
+-   Searches for relevant context based on user questions
+
+-   Generates responses using OpenAI\'s language models
+
+-   Collects user feedback to improve the model
+
+## **Setup and Installation**
+
+### **Prerequisites**
+
+-   Node.js and npm
+
+-   Python 3.12
+
+-   Virtual environment tool (e.g., venv)
+
 ### **Installation**
 
 **Clone the repository\
